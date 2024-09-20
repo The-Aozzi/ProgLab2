@@ -47,7 +47,9 @@ jobs:
     - name: Install minGW
       run: |
         choco install mingw
-        echo "C:/tools/mingw64/bin" >> $env:GITHUB_PATH
+        echo "C:/mingw64/tools/bin" >> $env:GITHUB_PATH
+        gcc --version
+        g++ --version
 
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
