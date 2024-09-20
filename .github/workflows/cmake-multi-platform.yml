@@ -46,7 +46,7 @@ jobs:
         echo "build-output-dir=${{ github.workspace }}/build" >> "$GITHUB_OUTPUT"
 
     - name: Install minGW
-      if: matrix.os == "windows-latest"
+      if: matrix.os == 'windows-latest'
       run: |
         choco install mingw
         echo "C:/mingw64/tools/bin" >> $env:GITHUB_PATH
