@@ -6,7 +6,7 @@ TEST(make_ip, make_ip)
 {
     EXPECT_EQ(make_ip("127.0.0.1"), ip_t(127, 0, 0, 1));
     EXPECT_EQ(make_ip("255.255.255.255SomeTrash"), ip_t(255, 255, 255, 255));
-    EXPECT_EQ(make_ip("0.0.0.0.1.2"), ip_t(01, 0, 0, 0));
+    EXPECT_EQ(make_ip("0.0.0.0.1.2"), ip_t(0, 0, 0, 0));
 }
 
 TEST(print_ip, print_ip)

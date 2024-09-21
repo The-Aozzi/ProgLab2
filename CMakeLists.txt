@@ -25,4 +25,17 @@ add_executable(tests tests.cpp utils.cpp)
 
 target_link_libraries(tests gtest gtest_main)
 
+install(TARGETS ProgLab2 DESTINATION bin)
+install(FILES ip_filter.tsv DESTINATION bin)
+
+set(CPACK_GENERATOR "DEB;ZIP")
+
+set(CPACK_PACKAGE_VERSION_MAJOR "${PROJECT_VERSION_MAJOR}")
+set(CPACK_PACKAGE_VERSION_MINOR "${PROJECT_VERSION_MINOR}")
+set(CPACK_PACKAGE_VERSION_PATCH "${PROJECT_VERSION_PATCH}")
+
+set(CPACK_PACKAGE_CONTACT example@example.com)
+
+include(CPack)
+
 add_test(NAME UnitTests COMMAND tests)
