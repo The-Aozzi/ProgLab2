@@ -25,6 +25,8 @@ int main(int, char **)
         ip_queue.push(ip);
     }
 
+    file.close();
+
     std::vector<ip_t> ip_list;
 
     while (!ip_queue.empty())
